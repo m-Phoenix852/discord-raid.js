@@ -1,0 +1,22 @@
+{
+  "name": "discord-raid.js",
+  "version": "1.0.0",
+  "description": "Raid discord servers with this tool, simple and effective.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Discord",
+    "raid",
+    "bots"
+  ],
+  "authors": [
+    "m-Phoenix852",
+    "KnzoYT"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.6.4"
+  }
+}
