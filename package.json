@@ -4,6 +4,7 @@
   "description": "Raid discord servers with this tool, simple and effective.",
   "main": "index.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
