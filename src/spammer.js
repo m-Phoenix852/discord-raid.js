@@ -1,16 +1,15 @@
 const config = require('../config');
 
-module.exports = (clients) => {
+module.exports = (client) => {
     let spamDelay = config.spam_delay;
     let spamMessage = config.message;
     let channels = config.channels;
 
-    let i = 0;
-
     setInterval(() => {
-        clients.forEach(client => {
-            let channel = channels[Math.random() * channels.length];
-            channel.send(spamMessage);
-        });
+      let channel = client.channels.get(channels[Math.floor(Math.random() * channels.length)]);
+      if(!channel) return;
+      
+      if(Array.isArray(spamMessage)) for(let msg of spamMessage) channel.send(msg)
+      else channel.send(spamMessage);
     }, spamDelay);
 }
