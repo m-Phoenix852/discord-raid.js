@@ -1,6 +1,5 @@
 /**
- * @author m-Phoenix852
- * @author KnzoYT
+ * @author Phoenix852
  */
 
  require("./src/index")();
