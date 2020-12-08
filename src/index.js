@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const clients = new Array();
 const fs = require('fs');
 const tokens = new Array();
 const config = require('../config');
@@ -11,9 +10,10 @@ for(let token of tokens){
     let client = new Discord.Client();
     client.login(token).then(() => {
         console.log(`${client.user.tag} logged in!`)
-        clients.push(client);
+        require("./spammer")(client);
     }).catch(e => {
         throw `Error logging in with the token "${token}": ${e}`
     })
-}
+}  
+
 }
